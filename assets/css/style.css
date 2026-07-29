@@ -182,17 +182,19 @@ img {
 }
 
 .intro {
+  min-height: calc(100svh - 76px);
   display: grid;
-  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
   align-items: center;
-  gap: clamp(48px, 8vw, 112px);
-  padding-block: clamp(72px, 10vw, 128px);
+  gap: clamp(44px, 7vw, 100px);
+  padding-block: clamp(48px, 7vw, 84px);
 }
 
 .intro-portrait {
-  aspect-ratio: 1;
+  width: 100%;
+  height: min(560px, calc(100svh - 170px));
+  min-height: 440px;
   overflow: hidden;
-  border-radius: 50%;
   background: var(--paper-deep);
   box-shadow: var(--shadow);
 }
@@ -204,32 +206,45 @@ img {
 }
 
 .intro-copy {
-  max-width: 760px;
+  max-width: 680px;
 }
 
 .intro-name {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(38px, 5vw, 58px);
+  font-size: clamp(44px, 5.5vw, 70px);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 1;
+  line-height: 1.02;
+}
+
+.intro-rule {
+  display: block;
+  width: 74px;
+  height: 4px;
+  margin: 28px 0 24px;
+  background: var(--accent);
+}
+
+.intro-kicker {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.8vw, 21px);
 }
 
 .intro-statement {
-  max-width: 720px;
-  margin: 26px 0 0;
-  font-family: var(--serif);
-  font-size: clamp(27px, 3.4vw, 42px);
-  letter-spacing: -0.025em;
-  line-height: 1.14;
+  max-width: 630px;
+  margin: 28px 0 0;
+  font-size: clamp(20px, 2.2vw, 27px);
+  letter-spacing: -0.015em;
+  line-height: 1.38;
 }
 
 .intro-detail {
-  max-width: 640px;
-  margin: 22px 0 0;
+  max-width: 600px;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -325,12 +340,15 @@ img {
 }
 
 .experience-section {
+  border-block: 1px solid var(--line);
+  background: var(--paper-deep);
   padding-block: clamp(92px, 11vw, 142px);
 }
 
 .experience-heading {
-  max-width: 730px;
-  margin-bottom: 62px;
+  max-width: 680px;
+  margin: 0 auto 72px;
+  text-align: center;
 }
 
 .experience-heading .eyebrow {
@@ -349,46 +367,83 @@ img {
 
 .timeline {
   position: relative;
-  max-width: 900px;
-  margin-left: clamp(4px, 4vw, 56px);
+  max-width: 1040px;
+  margin-inline: auto;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  top: 9px;
-  bottom: 12px;
-  left: 5px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
   width: 1px;
-  background: color-mix(in srgb, var(--paper) 26%, transparent);
+  background: var(--ink);
 }
 
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 180px minmax(220px, 0.8fr) minmax(280px, 1.2fr);
-  gap: 12px 28px;
-  padding: 0 0 58px 42px;
+  grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  min-height: 220px;
+  padding-bottom: 30px;
 }
 
 .timeline-item:last-child {
   padding-bottom: 0;
 }
 
-.timeline-marker {
+.timeline-item::after {
+  content: "";
   position: absolute;
-  top: 5px;
-  left: 0;
-  width: 11px;
-  height: 11px;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
+  top: 50px;
+  width: 36px;
+  height: 1px;
   background: var(--ink);
 }
 
+.timeline-item:nth-child(odd)::after {
+  left: calc(50% - 36px);
+}
+
+.timeline-item:nth-child(even)::after {
+  left: 50%;
+}
+
+.timeline-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  background: var(--paper);
+  padding: 28px 30px 30px;
+  box-shadow: 0 14px 38px rgba(35, 30, 24, 0.06);
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+  grid-column: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+  grid-column: 3;
+}
+
+.timeline-marker {
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  width: 15px;
+  height: 15px;
+  margin-top: 43px;
+  border: 3px solid var(--paper-deep);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
 .timeline-period {
-  margin: 1px 0 0;
-  color: color-mix(in srgb, var(--paper) 54%, transparent);
+  margin: 0 0 12px;
+  color: var(--muted);
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -397,23 +452,22 @@ img {
 .timeline-role {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(24px, 2.7vw, 34px);
+  font-size: clamp(25px, 2.5vw, 32px);
   font-weight: 400;
   line-height: 1.1;
 }
 
 .timeline-company {
-  grid-column: 2;
-  margin: 0;
+  margin: 8px 0 0;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .timeline-summary {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-  margin: 0;
-  color: color-mix(in srgb, var(--paper) 68%, transparent);
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -888,22 +942,21 @@ a.research-item:focus-visible {
   }
 
   .intro {
+    min-height: auto;
     grid-template-columns: 1fr;
     gap: 44px;
     padding-block: 72px 84px;
   }
 
   .intro-portrait {
-    width: min(300px, 72vw);
+    width: min(520px, 100%);
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 5 / 4;
   }
 
-  .timeline-item {
-    grid-template-columns: 150px 1fr;
-  }
-
-  .timeline-summary {
-    grid-column: 2;
-    grid-row: auto;
+  .intro-copy {
+    order: 1;
   }
 
   .destination-grid {
@@ -941,11 +994,11 @@ a.research-item:focus-visible {
   }
 
   .intro-name {
-    font-size: clamp(38px, 12vw, 50px);
+    font-size: clamp(40px, 12vw, 54px);
   }
 
   .intro-statement {
-    font-size: clamp(26px, 8vw, 34px);
+    font-size: clamp(20px, 6vw, 25px);
   }
 
   .experience-heading {
@@ -953,20 +1006,46 @@ a.research-item:focus-visible {
   }
 
   .timeline {
-    margin-left: 0;
+    margin-left: 2px;
+  }
+
+  .timeline::before {
+    left: 7px;
   }
 
   .timeline-item {
     display: block;
-    padding: 0 0 52px 32px;
+    min-height: auto;
+    padding: 0 0 34px 46px;
+  }
+
+  .timeline-item::after,
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    top: 43px;
+    left: 7px;
+    width: 39px;
+  }
+
+  .timeline-card {
+    padding: 24px 24px 26px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0;
   }
 
   .timeline-role {
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .timeline-company {
-    margin-top: 7px;
+    margin-top: 8px;
   }
 
   .timeline-summary {
