@@ -887,21 +887,9 @@ a.research-item:focus-visible {
   font-size: 20px;
 }
 
-.writing-intro {
-  max-width: 860px;
-  padding-block: 80px 46px;
-}
-
-.writing-intro h1 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(44px, 5vw, 64px);
-  font-weight: 400;
-  line-height: 1;
-}
-
 .blog-index {
   max-width: 860px;
+  margin-top: 64px;
   padding-bottom: 110px;
   border-top: 1px solid var(--line);
 }
@@ -1104,6 +1092,29 @@ a.research-item:focus-visible {
   font-family: var(--serif);
   font-size: 26px;
   line-height: 1.45;
+}
+
+.prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2.2em 0;
+}
+
+.prose figure {
+  margin: 2.2em 0;
+}
+
+.prose figure img {
+  margin: 0;
+}
+
+.prose figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .post-footer {
@@ -1403,11 +1414,8 @@ a.research-item:focus-visible {
     grid-column: 1 / -1;
   }
 
-  .writing-intro {
-    padding-block: 58px 34px;
-  }
-
   .blog-index {
+    margin-top: 40px;
     padding-bottom: 80px;
   }
 
