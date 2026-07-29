@@ -1096,9 +1096,10 @@ a.research-item:focus-visible {
 
 .prose img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
-  margin: 2.2em 0;
+  margin: 2.2em auto;
 }
 
 .prose figure {

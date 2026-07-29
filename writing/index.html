@@ -6,14 +6,13 @@ permalink: /writing/
 body_class: writing-page
 ---
 <section class="blog-index shell" aria-label="Articles">
-  {% assign local_articles = site.pages | where: "article", true | sort: "date" | reverse %}
-  {% assign all_articles = local_articles | concat: site.data.articles | sort: "date" | reverse %}
-  {% if all_articles.size > 0 %}
-    {% for article in all_articles %}
-      <a class="blog-link" href="{% if article.article %}{{ article.url | relative_url }}{% else %}{{ article.url }}{% endif %}"{% unless article.article %} rel="noopener"{% endunless %}>
+  {% assign articles = site.pages | where: "article", true | sort: "date" | reverse %}
+  {% if articles.size > 0 %}
+    {% for article in articles %}
+      <a class="blog-link" href="{{ article.url | relative_url }}">
         <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %-d, %Y" }}</time>
         <h2>{{ article.title }}</h2>
-        <span aria-hidden="true">{% if article.article %}→{% else %}↗{% endif %}</span>
+        <span aria-hidden="true">→</span>
       </a>
     {% endfor %}
   {% else %}
