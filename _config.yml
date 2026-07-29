@@ -1,0 +1,15 @@
+title: Avinash Kadimisetty
+description: Machine learning engineer, researcher, and builder.
+url: "https://avinashingit.github.io"
+baseurl: ""
+author:
+  name: Avinash Kadimisetty
+  email: kavinash366@gmail.com
+permalink: /writing/:year/:month/:day/:title/
+timezone: America/Los_Angeles
+markdown: kramdown
+future: false
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

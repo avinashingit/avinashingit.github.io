@@ -1,267 +1,187 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+---
+layout: default
+title:
+description: Avinash Kadimisetty is a machine learning engineer at Meta who builds useful learning systems and writes about machine learning, research, and engineering.
+---
+<section class="hero shell">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ML Engineer at Meta · San Francisco Bay Area</p>
+    <h1>I build learning systems that turn messy data into useful products.</h1>
+    <p class="hero-lede">
+      I’m Avinash Kadimisetty, a machine learning engineer, researcher, and lifelong builder.
+      My work sits at the intersection of applied ML, large-scale systems, and product.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+      <a class="button button-quiet" href="{{ '/writing/' | relative_url }}">Read my writing <span aria-hidden="true">↗</span></a>
+    </div>
+    <ul class="skill-line" aria-label="Areas of focus">
+      <li>Machine learning</li>
+      <li>Deep learning</li>
+      <li>Applied research</li>
+    </ul>
+  </div>
+  <div class="portrait-wrap">
+    <div class="portrait-frame">
+      <img src="{{ '/images/myself.jpg' | relative_url }}" alt="Portrait of Avinash Kadimisetty" width="287" height="287">
+    </div>
+    <p class="portrait-note">
+      <span>Currently</span>
+      Building machine learning systems at Meta.
+    </p>
+  </div>
+</section>
 
-<head>
-  <meta name=viewport content="width=800">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
+<section class="marquee" aria-label="Professional summary">
+  <div class="marquee-track">
+    <span>Machine learning engineer</span><i>✦</i>
+    <span>Researcher</span><i>✦</i>
+    <span>Builder</span><i>✦</i>
+    <span>Machine learning engineer</span><i>✦</i>
+    <span>Researcher</span><i>✦</i>
+    <span>Builder</span>
+  </div>
+</section>
 
-    a {
-      color: #1772d0;
-      text-decoration: none;
-    }
+<section id="work" class="section shell">
+  <div class="section-heading">
+    <p class="eyebrow">01 / Selected work</p>
+    <h2>Ideas made concrete.</h2>
+    <p>A selection of public projects spanning computer vision, language, and practical machine learning.</p>
+  </div>
+  <div class="project-grid">
+    <a class="project-card project-card-featured" href="https://github.com/avinashingit/image-super-resolution">
+      <div class="project-topline"><span>Computer vision</span><span>01</span></div>
+      <div>
+        <h3>Image Super-Resolution</h3>
+        <p>A residual neural network framework for reconstructing higher-resolution X-ray imagery from a single low-resolution input.</p>
+      </div>
+      <div class="project-meta"><span>Deep learning · Python</span><span aria-hidden="true">↗</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/avinashingit/neural-image-caption-generator">
+      <div class="project-topline"><span>Vision + language</span><span>02</span></div>
+      <div>
+        <h3>Neural Image Captioning</h3>
+        <p>An encoder-decoder system pairing ResNet visual features with a GRU language model, evaluated on MS COCO.</p>
+      </div>
+      <div class="project-meta"><span>PyTorch · NLP</span><span aria-hidden="true">↗</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/avinashingit/relation-extraction-from-text">
+      <div class="project-topline"><span>Natural language</span><span>03</span></div>
+      <div>
+        <h3>Relation Extraction</h3>
+        <p>A system for mining relational patterns from genomic text and organizing them into a semantically typed taxonomy.</p>
+      </div>
+      <div class="project-meta"><span>Text mining · Python</span><span aria-hidden="true">↗</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/avinashingit/ml-in-python">
+      <div class="project-topline"><span>Learning in public</span><span>04</span></div>
+      <div>
+        <h3>ML in Python</h3>
+        <p>Readable implementations and notebooks covering practical classification and regression techniques.</p>
+      </div>
+      <div class="project-meta"><span>Notebooks · Education</span><span aria-hidden="true">↗</span></div>
+    </a>
+  </div>
+  <div class="section-cta">
+    <a class="text-link" href="https://github.com/avinashingit?tab=repositories">View all repositories ↗</a>
+  </div>
+</section>
 
-    a:focus,
-    a:hover {
-      color: #f09228;
-      text-decoration: none;
-    }
+<section id="research" class="section section-ink">
+  <div class="shell">
+    <div class="section-heading section-heading-light">
+      <p class="eyebrow">02 / Research</p>
+      <h2>Questions worth following.</h2>
+      <p>My research has explored generative medical imaging, healthcare prediction, and data-mining approaches to compression.</p>
+    </div>
+    <div class="research-list">
+      <a class="research-item" href="https://arxiv.org/abs/2510.26188">
+        <div class="research-year">2025</div>
+        <div>
+          <h3>Predicting All-Cause Hospital Readmissions from Medical Claims Data</h3>
+          <p>Machine learning models for identifying factors associated with preventable hospital readmissions.</p>
+        </div>
+        <span class="research-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="research-item research-item-static">
+        <div class="research-year">2019</div>
+        <div>
+          <h3>Generative Neural Networks for Tomographic Synthesis</h3>
+          <p>Synthesizing tomographic views from a single frontal chest radiograph using deep generative models. Presented at RSNA.</p>
+        </div>
+        <span class="research-arrow" aria-hidden="true">—</span>
+      </div>
+      <a class="research-item" href="https://ieeexplore.ieee.org/document/7838977">
+        <div class="research-year">2016</div>
+        <div>
+          <h3>Lossy Image Compression via Frequent Sequence Mining</h3>
+          <p>A clustering and sequence-mining approach to compression, published at IEEE INDICON.</p>
+        </div>
+        <span class="research-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="research-item" href="https://ieeexplore.ieee.org/document/8385599">
+        <div class="research-year">2016</div>
+        <div>
+          <h3>Frequent Pattern Mining Approach to Image Compression</h3>
+          <p>Replacing parts of the traditional JPEG pipeline with clustering and closed frequent sequence mining.</p>
+        </div>
+        <span class="research-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="section-cta section-cta-dark">
+      <a class="text-link" href="https://scholar.google.com/citations?user=Buazhw4AAAAJ&amp;hl=en">See Google Scholar ↗</a>
+    </div>
+  </div>
+</section>
 
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 15px
-    }
+<section id="writing" class="section shell">
+  <div class="section-heading heading-row">
+    <div>
+      <p class="eyebrow">03 / Writing</p>
+      <h2>Notes from the workbench.</h2>
+    </div>
+    <a class="text-link desktop-link" href="{{ '/writing/' | relative_url }}">All writing ↗</a>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+      <a class="post-row" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+        </div>
+        <span aria-hidden="true">↗</span>
+      </a>
+    {% endfor %}
+  </div>
+  <a class="text-link mobile-link" href="{{ '/writing/' | relative_url }}">All writing ↗</a>
+</section>
 
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 15px;
-    }
-
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 24px;
-    }
-
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700
-    }
-
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-    }
-
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
-    }
-
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    span.highlight {
-      background-color: #ffffd0;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="images/myself.jpg">
-  <title>Avinash Kadimisetty</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-  <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="67%" valign="middle">
-              <p align="center">
-                <name>Avinash Kadimisetty</name>
-              </p>
-              <br/>
-              <p>I am a graduate student in computer science at the <a href="https://illinois.edu">University of Illinois Urbana-Champaign</a>, where I work in the field of Machine Learning and Deep Learning.
-              </p>
-              <p>I interned at Yahoo in the Data team in summer 2019. Previously, I worked as a Junior Data Scientist from January 2017 to July 2018 at <a href="https://goevive.com">Evive Health, LLC</a>. I worked on applying Machine Learning to health data. </p>
-              <p>
-                I obtained my Bachelor's Degree in Computer Engineering from <a href="http://iiitdm.ac.in/">IIITDM Kancheepuram</a> in 2016.
-              </p>
-              <p align=center>
-                <a href="mailto:kavinash366@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="data/Resume_Avinash_Kadimisetty.pdf">Resume</a> &nbsp/&nbsp
-                <a href="https://github.com/avinashingit">Github</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=Buazhw4AAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/avinashkadimisetty/"> LinkedIn </a>
-              </p>
-            </td>
-            <td width="33%">
-              <img src="images/myself.jpg">
-            </td>
-          </tr>
-        </table>
-        <br/><br/>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle" id = "workex">
-              <heading>Work Experience</heading>
-              <br/><br/>
-              <h3><i><u>Summer Intern</u></i> at Yahoo - May to August, 2019</h3>
-              <p>I worked in the data platforms team at Yahoo Champaign office.<p>
-              <ul>
-                 <li>Designed and developed a product for generating insights from advertising data across all data sources at Yahoo</li>
-                 <li>Reduced the workload of the sales team for a customer meeting by 70%</li>
-                 <li><b>Tools/Technologies used: </b>Apache Pig, Hive, Presto, Python, Looker</li>
-              </ul>
-              <b>Achievements:</b> Rank 2 in a Yahoo homepage article recommendation machine learning contest organized across all Yahoo offices in the world.
-
-              <br/><br/><hr/>
-                <h3><i><u>Junior Data Scientist</u></i> at Evive Health, LLC - January, 2017 to July, 2018</h3>
-              <p>
-                As a Junior Data Scientist at Evive, I worked on several Data Science projects in the healthcare domain.
-              </p>
-              <ul>
-                  <li><b>User Behaviour Modelling</b>: Improved the conversion rates by 13% using ML to target potential users.</li>
-                  <br>
-                  <li><b>Medical Event Modelling</b>: Trained predictive models on AWS EC2 instances to find the chance of occurrence of chronic diseases which avoided $2.1mn in unnecessary treatments.</li>
-                  <br>
-                  <li><b>Hospital Readmission</b>: Identified users at high risk of readmission using machine learning techniques like CNN, Random Forest, and Logistic Regression to notify them early and avoid huge healthcare costs.</li>
-                  <br>
-                  <li><b>Report Automation</b>: Accelerated the report generation process at Evive to reduce the number of analysis hours by 60%.</li>
-              </ul>
-             <hr/>
-
-              <h3><i><u>Trainee Decision Scientist</u></i> at Mu Sigma Inc. - August, 2016 to January, 2017</h3>
-            <p>
-              As a Trainee Decision Scientist at Mu Sigma, I was involved in the development of the following analytic products.
-            </p>
-            <ul>
-                <li><strong>muScrum</strong>: Developed a web-app to store and analyze scrum details to reduce bi-weekly sprint analysis hours by 15%.</li>
-                <br>
-                <li><strong>muMix</strong>: Added new visualizations to show optimum spends across multiple channels in a marketing mix product.</li>
-            </ul>
-            </td>
-          </tr>
-        </table>
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Projects</heading><br/><br/>
-              <ul>
-                <li><strong><a href="https://github.com/avinashingit/neural-image-caption-generator">Neural Image Caption Generator</a></strong>: Implemented a Neural Image Caption (NIC) generator based on the paper Show and Tell in Python using PyTorch framework. Benchmarked its performance on MSCOCO and Flickr datasets.</li>
-                <br>
-                <li><strong><a href="https://github.com/avinashingit/image-super-resolution">Image Super Resolution</a></strong>: Created an image super resolution framework for x-ray images using Single Image Super Resolution
-Residual Neural Network. Stood in the top 10 percentile of the class with an average RMSE of 1.41.</li>
-                <br>
-                <li><strong><a href="https://github.com/avinashingit/relation-extraction-from-text">Relation Extraction from Genomic Text</a></strong>: Developed an engine to construct a taxonomy from genomic text by mining relational patterns from the corpus and then imposing a semantically typed structure on the patterns.</li>
-                <br>
-                <li><strong><a href="https://github.com/avinashingit/css_mail">Online Recruitment Portals</a></strong>: Developed web portals for Faculty and Staff Recruitment at IIITDM Kancheepuram. Automated
-selection process reduced the manual collection and selection process by 30%.</li>
-                <br>
-                <li><strong><a href="https://github.com/avinashingit/4pi">Student Portal - 4pi</a></strong>: An interactive online platform to share information breaking down all the barriers of accessibility and communication that existed earlier. Main features include Posts, Polls, Events and Professional Profiles, which can be viewed from anywhere across the globe. Designed the entire front end of the portal.</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Research</heading><br/><br/>
-              <p>
-                I'm interested in research related to Machine Learning, Computer Vision and Deep Learning. My publications are listed below.
-              </p>
-            </td>
-          </tr>
-        </table>
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="25%">
-              <div class="one">
-                <div class="two" id='darkflash_image'><img src='images/lossy_img_compress.png'></div>
-                <img src='images/lossy_img_compress.png'>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-              <a href="https://ieeexplore.ieee.org/document/7838977">
-                <papertitle>Lossy image compression - A frequent sequence mining perspective employing efficient clustering</papertitle>
-              </a>
-              <br>
-              <strong>Avinash Kadimisetty</strong>,
-              <a href="https://ieeexplore.ieee.org/author/37085769774">C. Oswald</a>,
-              <a href="https://ieeexplore.ieee.org/author/37846474200">B. Sivaselvan</a>,
-              <a href="https://ieeexplore.ieee.org/author/37086114036">K. Alekhya</a>
-              <br>
-              <em>INDICON, 2016</em>
-              <br>
-              <p></p>
-              <p>
-              	This work explores the scope of Frequent Sequence Mining in the domain of Lossy Image Compression. The proposed work is based on the idea of clustering pixels and using the cluster identifiers in the compression. This method focuses mainly on applying k-means clustering in parallel to all blocks of each component of the image to reduce the compression time.
-              </p>
-            </td>
-          </tr>
-
-          <tr>
-            <td width="25%">
-              <div class="one">
-                <div class="two" id='darkflash_image'><img src='images/img_compress.png'></div>
-                <img src='images/img_compress.png'>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-              <a href="https://ieeexplore.ieee.org/document/8385599">
-                <papertitle>Frequent Pattern Mining Approach to Image Compression</papertitle>
-              </a>
-              <br>
-              <strong>Avinash Kadimisetty</strong>,
-              <a href="https://ieeexplore.ieee.org/author/37085769774">C. Oswald</a>,
-              <a href="https://ieeexplore.ieee.org/author/37846474200">B. Sivaselvan</a>
-              <br>
-              <em>ADCOM, 2016</em>
-              <br>
-              <p></p>
-              <p>
-              	The paper focuses on Image Compression, explaining efficient approaches based on Frequent Pattern Mining(FPM). Redundant data in the image is effectively handled by replacing the DCT phase of conventional JPEG through a mixture of k-means Clustering and Closed Frequent Sequence Mining.
-              </p>
-            </td>
-          </tr>
-
-
-      </table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td width="100%" valign="middle">
-            <heading>Teaching</heading><br/><br/>
-            <p>I worked as a Teaching Assistant for the following course.</p>
-            <ul>
-                <li><a href="https://courses.illinois.edu/schedule/2019/spring/CS/102"><b>CS 102:Little Bits to Big Ideas</b></a></li>
-                <li><a href="https://cs.illinois.edu/sites/default/files/docs/syllabi/CS598_IS531_DataCuration.pdf"><b>CS 598: Foundations of Data Curation</b></a></li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-          <tbody><tr><td>
-          <br>
-              <p align="right"><font size="2">
-              <a href="http://www.cs.berkeley.edu/~barron/">Cloned from here!</a>
-              </font></p>
-      </td></tr>
-      </tbody></table>
-</body>
-
-</html>
+<section id="about" class="section shell about-grid">
+  <div class="section-heading">
+    <p class="eyebrow">04 / About</p>
+    <h2>Curious by default.</h2>
+  </div>
+  <div class="about-copy">
+    <p class="about-lede">
+      I’m a machine learning engineer at Meta. I care about the full path from a promising idea to a system people can rely on.
+    </p>
+    <p>
+      Before Meta, I worked with data and machine learning at Yahoo, Evive, and Mu Sigma. I earned my master’s in Computer Science from the University of Illinois Urbana-Champaign, where I focused on machine learning, deep learning, computer vision, data mining, and NLP.
+    </p>
+    <p>
+      Away from the day job, I like studying new ideas, building small experiments, and writing down what survives contact with reality.
+    </p>
+    <div class="about-actions">
+      <a class="button button-primary" href="{{ '/data/Resume_Avinash_Kadimisetty.pdf' | relative_url }}">Résumé <span aria-hidden="true">↗</span></a>
+      <a class="button button-quiet" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <dl class="facts">
+    <div><dt>Based in</dt><dd>San Francisco Bay Area</dd></div>
+    <div><dt>Currently</dt><dd>Machine Learning Engineer, Meta</dd></div>
+    <div><dt>Education</dt><dd>MS CS, UIUC · BE, IIITDM Kancheepuram</dd></div>
+    <div><dt>Interested in</dt><dd>ML systems, deep learning, applied research</dd></div>
+  </dl>
+</section>
