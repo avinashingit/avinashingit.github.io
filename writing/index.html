@@ -1,26 +1,30 @@
 ---
 layout: default
 title: Writing
-description: Notes by Avinash Kadimisetty on machine learning, engineering, research, and building useful systems.
+description: Articles by Avinash Kadimisetty on machine learning, data science, TensorFlow, optimization, and data mining.
 permalink: /writing/
 ---
 <section class="page-hero shell">
   <p class="eyebrow">Writing</p>
-  <h1>Notes from the workbench.</h1>
-  <p>Ideas about machine learning, engineering, research, and the practical work of turning experiments into useful systems.</p>
+  <h1>Articles.</h1>
+  <p>Writing on machine learning, data science, optimization, and the tools behind applied research.</p>
 </section>
 
 <section class="writing-archive shell">
-  {% if site.posts.size > 0 %}
-    {% for post in site.posts %}
-      <a class="archive-item" href="{{ post.url | relative_url }}">
+  {% if site.data.articles.size > 0 %}
+    {% for article in site.data.articles %}
+      <a class="archive-item" href="{{ article.url }}" rel="noopener">
         <div>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.description }}</p>
-          {% if post.tags %}
+          <div class="archive-meta">
+            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %-d, %Y" }}</time>
+            <span>{{ article.publication }}</span>
+            <span>{{ article.read_time }}</span>
+          </div>
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.description }}</p>
+          {% if article.tags %}
             <ul class="tag-list" aria-label="Topics">
-              {% for tag in post.tags %}<li>{{ tag }}</li>{% endfor %}
+              {% for tag in article.tags %}<li>{{ tag }}</li>{% endfor %}
             </ul>
           {% endif %}
         </div>
