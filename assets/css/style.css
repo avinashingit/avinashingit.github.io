@@ -280,18 +280,63 @@ img {
   line-height: 1;
 }
 
-.experience-list {
+.experience-list,
+.education-list {
+  position: relative;
   display: grid;
-  border-top: 1px solid var(--line);
+  padding-left: 24px;
+}
+
+.experience-list::before,
+.education-list::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 4px;
+  width: 1px;
+  background: var(--line);
 }
 
 .experience-list article {
+  position: relative;
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 20px;
   align-items: center;
   min-height: 44px;
-  border-bottom: 1px solid var(--line);
+}
+
+.education-list article {
+  position: relative;
+  min-height: 68px;
+  padding-block: 10px 12px;
+}
+
+.experience-list article::before,
+.education-list article::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--paper-deep);
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+.experience-list article::after,
+.education-list article::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 15px;
+  height: 1px;
+  background: var(--line);
 }
 
 .experience-list time,
@@ -324,11 +369,6 @@ img {
 .recent-writing {
   border-left: 1px solid var(--line);
   padding-left: clamp(22px, 2.5vw, 38px);
-}
-
-.education article {
-  border-top: 1px solid var(--line);
-  padding-block: 13px 15px;
 }
 
 .education h3 {
