@@ -1,0 +1,32 @@
+---
+layout: default
+title: Notes
+description: Technical notes by Avinash Kadimisetty on machine learning system design.
+permalink: /notes/
+body_class: notes-page
+---
+<section class="notes-index shell">
+  <header class="notes-heading">
+    <h1>Notes</h1>
+    <p>ML system design</p>
+  </header>
+
+  <div class="note-groups">
+    {% for section in site.data.ml_system_design_notes.sections %}
+      <section class="note-group" aria-labelledby="notes-section-{{ section.number }}">
+        <header>
+          <span>{{ section.number }}</span>
+          <h2 id="notes-section-{{ section.number }}">{{ section.title }}</h2>
+        </header>
+        <div class="note-link-list">
+          {% for note in section.notes %}
+            <a class="note-link" href="{{ note.url | relative_url }}">
+              <span>{{ note.title }}</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+</section>

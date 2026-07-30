@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="note shell">
+  <header class="note-header">
+    <a class="eyebrow back-link" href="{{ '/notes/' | relative_url }}">← All notes</a>
+    <p class="note-breadcrumb">ML system design · {{ page.note_section }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="note-dek">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose note-prose">
+    {{ content }}
+  </div>
+</article>
