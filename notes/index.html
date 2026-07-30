@@ -15,21 +15,33 @@ mermaid: true
     </div>
 
     <div class="notes-index-groups">
-      <details class="notes-index-parent" open>
-        <summary>ML fundamentals</summary>
-        <div class="notes-index-children">
+      <div class="notes-index-parent">
+        <p class="notes-index-parent-label">ML fundamentals</p>
+        <div class="notes-index-children" data-index-accordion>
           {% for section in site.data.ml_system_design_notes.sections %}
-            <details class="notes-index-group"{% if forloop.first %} open{% endif %}>
-              <summary><span>{{ section.number }}</span>{{ section.title }}</summary>
-              <nav aria-label="{{ section.title }} notes">
-                {% for note in section.notes %}
-                  <a href="{{ note.url | relative_url }}" data-note-view>{{ note.title }}</a>
-                {% endfor %}
-              </nav>
-            </details>
+            <section class="notes-index-group{% if forloop.first %} is-open{% endif %}">
+              <button
+                type="button"
+                aria-expanded="true"
+                aria-controls="notes-section-{{ section.number }}"
+                data-index-toggle
+              >
+                <span>{{ section.number }}</span>
+                <span>{{ section.title }}</span>
+              </button>
+              <div class="notes-index-panel" id="notes-section-{{ section.number }}">
+                <div>
+                  <nav aria-label="{{ section.title }} notes">
+                    {% for note in section.notes %}
+                      <a href="{{ note.url | relative_url }}" data-note-view>{{ note.title }}</a>
+                    {% endfor %}
+                  </nav>
+                </div>
+              </div>
+            </section>
           {% endfor %}
         </div>
-      </details>
+      </div>
     </div>
   </aside>
 

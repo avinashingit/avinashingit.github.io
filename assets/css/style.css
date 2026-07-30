@@ -1198,28 +1198,12 @@ a.research-item:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
-.notes-index-parent > summary {
+.notes-index-parent-label {
+  margin: 0;
   padding-block: 13px;
   border-bottom: 1px solid var(--line);
-  cursor: pointer;
   font-size: 13px;
   font-weight: 600;
-  list-style: none;
-}
-
-.notes-index-parent > summary::-webkit-details-marker {
-  display: none;
-}
-
-.notes-index-parent > summary::before {
-  content: "▸";
-  display: inline-block;
-  width: 20px;
-  color: var(--accent);
-}
-
-.notes-index-parent[open] > summary::before {
-  content: "▾";
 }
 
 .notes-index-children {
@@ -1228,25 +1212,62 @@ a.research-item:focus-visible {
   padding-left: 12px;
 }
 
-.notes-index-group summary {
+.notes-index-group > button {
+  width: 100%;
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: 25px minmax(0, 1fr) 12px;
   gap: 8px;
+  align-items: start;
+  border: 0;
+  background: transparent;
   padding-block: 11px;
+  color: var(--ink);
   cursor: pointer;
+  font-family: inherit;
   font-size: 12px;
   line-height: 1.25;
-  list-style: none;
+  text-align: left;
 }
 
-.notes-index-group summary::-webkit-details-marker {
-  display: none;
+.notes-index-group > button::after {
+  content: "+";
+  color: var(--accent);
+  text-align: right;
+  transform: rotate(0);
+  transition: transform 240ms ease;
 }
 
-.notes-index-group summary span {
+.notes-index-group.is-open > button::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.notes-index-group > button span:first-child {
   color: var(--accent);
   font-size: 10px;
   letter-spacing: 0.07em;
+}
+
+.notes-index-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 260ms ease, opacity 180ms ease;
+}
+
+.notes-index-panel > div {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.notes-browser.is-index-enhanced .notes-index-panel {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.notes-browser.is-index-enhanced .notes-index-group.is-open > .notes-index-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .notes-index-group nav {
