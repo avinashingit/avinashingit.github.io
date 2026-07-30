@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Vision and Waymo"
 section_order: 6
 note_order: 5
+updated: 2026-06-09 12:46:21 -0700
+keywords:
+  - Vision
+  - Embeddings
+  - Transformers
+  - Graphs
+  - Training
 math: true
 mermaid: false
 ---

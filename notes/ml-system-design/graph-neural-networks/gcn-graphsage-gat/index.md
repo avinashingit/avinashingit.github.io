@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Graph Neural Networks"
 section_order: 4
 note_order: 1
+updated: 2026-06-09 12:43:15 -0700
+keywords:
+  - Graphs
+  - Training
+  - Embeddings
+  - Transformers
+  - Fraud
 math: true
 mermaid: false
 ---

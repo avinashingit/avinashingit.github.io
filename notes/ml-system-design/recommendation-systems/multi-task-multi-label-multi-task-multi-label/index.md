@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Recommendation Systems"
 section_order: 2
 note_order: 9
+updated: 2026-06-17 10:15:07 -0700
+keywords:
+  - Ranking
+  - Recommendation
+  - Training
+  - Vision
+  - Serving
 math: true
 mermaid: true
 ---

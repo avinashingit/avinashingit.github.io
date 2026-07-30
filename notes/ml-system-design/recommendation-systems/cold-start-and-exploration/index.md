@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Recommendation Systems"
 section_order: 2
 note_order: 1
+updated: 2026-06-09 12:40:19 -0700
+keywords:
+  - Recommendation
+  - Ranking
+  - LLMs
+  - Embeddings
+  - Retrieval
 math: true
 mermaid: false
 ---

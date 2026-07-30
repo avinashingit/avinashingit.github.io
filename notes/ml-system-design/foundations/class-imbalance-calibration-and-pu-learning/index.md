@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Foundations"
 section_order: 1
 note_order: 2
+updated: 2026-06-09 12:36:21 -0700
+keywords:
+  - Training
+  - Embeddings
+  - Evaluation
+  - Fraud
+  - Ranking
 math: true
 mermaid: false
 ---

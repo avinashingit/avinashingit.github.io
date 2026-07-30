@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Graph Neural Networks"
 section_order: 4
 note_order: 5
+updated: 2026-06-09 12:43:15 -0700
+keywords:
+  - Graphs
+  - Training
+  - Serving
+  - Embeddings
+  - Retrieval
 math: true
 mermaid: false
 ---

@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Vision and Waymo"
 section_order: 6
 note_order: 7
+updated: 2026-06-10 18:47:40 -0700
+keywords:
+  - Vision
+  - LLMs
+  - Serving
+  - Training
+  - Embeddings
 math: true
 mermaid: false
 ---

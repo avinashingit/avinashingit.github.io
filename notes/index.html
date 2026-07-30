@@ -4,29 +4,65 @@ title: Notes
 description: Technical notes by Avinash Kadimisetty on machine learning system design.
 permalink: /notes/
 body_class: notes-page
+math: true
+mermaid: true
 ---
-<section class="notes-index shell">
-  <header class="notes-heading">
-    <h1>Notes</h1>
-    <p>ML system design</p>
-  </header>
+<section class="notes-browser shell" data-notes-browser>
+  <aside class="notes-sidebar" aria-label="Notes index">
+    <div class="notes-panel-heading">
+      <span>Index</span>
+      <button class="notes-reset is-active" type="button" data-notes-reset>All notes</button>
+    </div>
 
-  <div class="note-groups">
-    {% for section in site.data.ml_system_design_notes.sections %}
-      <section class="note-group" aria-labelledby="notes-section-{{ section.number }}">
-        <header>
-          <span>{{ section.number }}</span>
-          <h2 id="notes-section-{{ section.number }}">{{ section.title }}</h2>
-        </header>
-        <div class="note-link-list">
-          {% for note in section.notes %}
-            <a class="note-link" href="{{ note.url | relative_url }}">
-              <span>{{ note.title }}</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          {% endfor %}
-        </div>
-      </section>
-    {% endfor %}
-  </div>
+    <div class="notes-index-groups">
+      {% for section in site.data.ml_system_design_notes.sections %}
+        <details class="notes-index-group"{% if forloop.first %} open{% endif %}>
+          <summary><span>{{ section.number }}</span>{{ section.title }}</summary>
+          <nav aria-label="{{ section.title }} notes">
+            {% for note in section.notes %}
+              <a href="{{ note.url | relative_url }}" data-note-view>{{ note.title }}</a>
+            {% endfor %}
+          </nav>
+        </details>
+      {% endfor %}
+    </div>
+  </aside>
+
+  <section class="notes-results-panel" aria-live="polite">
+    <header class="notes-results-heading">
+      <span data-results-label>All notes · Recent first</span>
+      <span data-results-count>{{ site.data.ml_system_design_notes.notes.size }}</span>
+    </header>
+
+    <div class="notes-results" data-notes-results>
+      {% for note in site.data.ml_system_design_notes.notes %}
+        <article class="note-summary" data-note-card data-keywords="{{ note.keywords | join: '|' | downcase | escape }}">
+          <div class="note-summary-meta">
+            <span>{{ note.section_number }} · {{ note.section }}</span>
+            <time datetime="{{ note.updated }}">{{ note.updated | date: "%b %-d, %Y" }}</time>
+          </div>
+          <h2><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h2>
+          {% if note.description %}<p>{{ note.description }}</p>{% endif %}
+          <ul aria-label="Keywords">
+            {% for keyword in note.keywords %}
+              <li>{{ keyword }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <aside class="notes-keywords" aria-label="Filter notes by keyword">
+    <div class="notes-panel-heading"><span>Keywords</span></div>
+    <div class="keyword-list">
+      {% for keyword in site.data.ml_system_design_notes.keywords %}
+        <button type="button" data-keyword="{{ keyword | downcase | escape }}" aria-pressed="false">
+          <span>{{ keyword }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </aside>
 </section>
+
+<script src="{{ '/assets/js/notes.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

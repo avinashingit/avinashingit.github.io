@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Search and LLMs"
 section_order: 3
 note_order: 5
+updated: 2026-06-10 18:47:40 -0700
+keywords:
+  - Retrieval
+  - LLMs
+  - Embeddings
+  - Evaluation
+  - Ranking
 math: true
 mermaid: false
 ---

@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Foundations"
 section_order: 1
 note_order: 4
+updated: 2026-06-09 12:29:07 -0700
+keywords:
+  - Embeddings
+  - Training
+  - Retrieval
+  - Recommendation
+  - Transformers
 math: true
 mermaid: false
 ---

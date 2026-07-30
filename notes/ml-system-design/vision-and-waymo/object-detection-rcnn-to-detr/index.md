@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Vision and Waymo"
 section_order: 6
 note_order: 6
+updated: 2026-06-09 12:45:07 -0700
+keywords:
+  - Vision
+  - Transformers
+  - Training
+  - Evaluation
+  - Serving
 math: true
 mermaid: false
 ---

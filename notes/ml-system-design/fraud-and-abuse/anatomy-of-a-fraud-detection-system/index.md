@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Fraud and Abuse"
 section_order: 5
 note_order: 1
+updated: 2026-06-10 18:47:40 -0700
+keywords:
+  - Fraud
+  - Ranking
+  - Graphs
+  - Serving
+  - Evaluation
 math: true
 mermaid: false
 ---

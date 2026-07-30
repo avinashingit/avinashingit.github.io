@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Search and LLMs"
 section_order: 3
 note_order: 3
+updated: 2026-06-09 12:41:40 -0700
+keywords:
+  - LLMs
+  - Retrieval
+  - Training
+  - Ranking
+  - Transformers
 math: true
 mermaid: false
 ---

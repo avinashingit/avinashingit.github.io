@@ -7,6 +7,13 @@ note_collection: "ML system design"
 note_section: "Fraud and Abuse"
 section_order: 5
 note_order: 2
+updated: 2026-06-09 12:44:02 -0700
+keywords:
+  - Fraud
+  - Embeddings
+  - Vision
+  - Training
+  - Retrieval
 math: true
 mermaid: false
 ---
