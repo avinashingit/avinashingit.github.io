@@ -1199,11 +1199,55 @@ a.research-item:focus-visible {
 }
 
 .notes-index-parent-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: transparent;
   margin: 0;
   padding-block: 13px;
   border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
+  text-align: left;
+}
+
+.notes-index-parent-label::after {
+  content: "+";
+  color: var(--accent);
+  transform: rotate(0);
+  transition: transform 240ms ease;
+}
+
+.notes-index-parent.is-open > .notes-index-parent-label::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.notes-index-parent-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 280ms ease, opacity 180ms ease;
+}
+
+.notes-index-parent-panel > div {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.notes-browser.is-index-enhanced .notes-index-parent-panel {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.notes-browser.is-index-enhanced .notes-index-parent.is-open > .notes-index-parent-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .notes-index-children {

@@ -9,8 +9,23 @@
   const reset = browser.querySelector("[data-notes-reset]");
   const keywordButtons = [...browser.querySelectorAll("[data-keyword]")];
   const noteLinks = [...browser.querySelectorAll("[data-note-view]")];
+  const indexParents = [...browser.querySelectorAll(".notes-index-parent")];
   const indexGroups = [...browser.querySelectorAll(".notes-index-group")];
   const listMarkup = results.innerHTML;
+
+  const setIndexParent = (parent, open) => {
+    parent.classList.toggle("is-open", open);
+    parent.querySelector("[data-index-parent-toggle]")?.setAttribute("aria-expanded", String(open));
+  };
+
+  indexParents.forEach((parent) => {
+    setIndexParent(parent, parent.classList.contains("is-open"));
+    parent.querySelector("[data-index-parent-toggle]")?.addEventListener("click", () => {
+      const shouldOpen = !parent.classList.contains("is-open");
+      indexParents.forEach((item) => setIndexParent(item, false));
+      if (shouldOpen) setIndexParent(parent, true);
+    });
+  });
 
   const setIndexGroup = (group, open) => {
     group.classList.toggle("is-open", open);
@@ -68,6 +83,10 @@
   };
 
   const showNote = async (link, updateHistory = true) => {
+    const parent = link.closest(".notes-index-parent");
+    if (parent && !parent.classList.contains("is-open")) {
+      indexParents.forEach((item) => setIndexParent(item, item === parent));
+    }
     const group = link.closest(".notes-index-group");
     if (group && !group.classList.contains("is-open")) {
       indexGroups.forEach((item) => setIndexGroup(item, item === group));
