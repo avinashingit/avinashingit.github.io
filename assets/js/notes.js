@@ -66,7 +66,7 @@
       const sourceBody = page.querySelector(".note-prose");
       if (!sourceHeader || !sourceBody) throw new Error("Note content was not found");
 
-      sourceHeader.querySelector(".back-link")?.remove();
+      sourceHeader.querySelector(".note-meta-line")?.remove();
       sourceBody.querySelectorAll("[src]").forEach((node) => {
         node.setAttribute("src", new URL(node.getAttribute("src"), response.url).href);
       });

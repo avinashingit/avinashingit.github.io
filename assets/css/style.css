@@ -1405,45 +1405,92 @@ a.research-item:focus-visible {
 }
 
 .note {
-  max-width: 920px;
-  padding-block: 48px 84px;
+  max-width: 1040px;
+  padding-block: 28px 60px;
 }
 
 .note-header {
-  max-width: 760px;
-  margin-bottom: 28px;
+  max-width: 860px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+}
+
+.note-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.note-meta-line .back-link {
+  color: var(--accent);
+  letter-spacing: inherit;
 }
 
 .note-breadcrumb {
-  margin: 18px 0 8px;
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 .note-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(29px, 3.8vw, 40px);
+  font-size: clamp(25px, 3vw, 32px);
   font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.14;
+  letter-spacing: -0.02em;
+  line-height: 1.16;
 }
 
 .note-dek {
-  max-width: 720px;
-  margin: 12px 0 0;
+  max-width: 820px;
+  margin: 7px 0 0;
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .note-prose {
   max-width: 760px;
   font-size: 15px;
   line-height: 1.6;
+}
+
+.note > .note-prose {
+  max-width: 860px;
+  font-size: 14px;
+  line-height: 1.52;
+}
+
+.note > .note-prose p,
+.note > .note-prose ul,
+.note > .note-prose ol {
+  margin-bottom: 0.72em;
+}
+
+.note > .note-prose h2,
+.note > .note-prose h3,
+.note > .note-prose h4 {
+  margin-top: 1.25em;
+}
+
+.note > .note-prose h2 {
+  font-size: 19px;
+}
+
+.note > .note-prose h3 {
+  font-size: 16px;
+}
+
+.note > .note-prose h4 {
+  font-size: 14px;
 }
 
 .note-prose p,
@@ -1889,24 +1936,24 @@ a.research-item:focus-visible {
   }
 
   .note {
-    padding-block: 38px 68px;
+    padding-block: 24px 52px;
   }
 
   .note-header h1 {
-    font-size: clamp(27px, 8vw, 34px);
+    font-size: clamp(24px, 7vw, 30px);
   }
 
-  .note-prose {
+  .note > .note-prose {
     font-size: 14px;
-    line-height: 1.58;
+    line-height: 1.5;
   }
 
-  .note-prose h2 {
-    font-size: 20px;
+  .note > .note-prose h2 {
+    font-size: 18px;
   }
 
-  .note-prose h3 {
-    font-size: 17px;
+  .note > .note-prose h3 {
+    font-size: 16px;
   }
 
   .footer-bottom {
