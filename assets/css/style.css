@@ -268,7 +268,7 @@ img {
 .resume-grid {
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(210px, 0.78fr) minmax(230px, 0.9fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(28px, 3vw, 48px);
 }
 
@@ -354,6 +354,8 @@ img {
 
 .recent-article h3 {
   margin-top: 5px;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
 .intro {
@@ -1210,6 +1212,10 @@ a.research-item:focus-visible {
     border-left: 0;
     padding-top: 42px;
     padding-left: 0;
+  }
+
+  .recent-article h3 {
+    white-space: normal;
   }
 
   .home-stage {
