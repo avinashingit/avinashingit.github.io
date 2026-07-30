@@ -1300,7 +1300,7 @@ a.research-item:focus-visible {
 }
 
 .note-summary {
-  padding-block: 23px 25px;
+  padding-block: 11px 12px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1315,11 +1315,11 @@ a.research-item:focus-visible {
 }
 
 .note-summary h2 {
-  margin: 9px 0 8px;
-  font-family: var(--serif);
-  font-size: clamp(20px, 2.1vw, 26px);
-  font-weight: 400;
-  line-height: 1.18;
+  margin: 5px 0 0;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .note-summary h2 a:hover,
@@ -1328,19 +1328,11 @@ a.research-item:focus-visible {
 }
 
 .note-summary p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.55;
+  display: none;
 }
 
 .note-summary ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 14px 0 0;
-  padding: 0;
-  list-style: none;
+  display: none;
 }
 
 .note-summary li {
@@ -1387,12 +1379,12 @@ a.research-item:focus-visible {
 }
 
 .embedded-note {
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 .embedded-note-header {
-  max-width: 680px;
-  margin-bottom: 34px;
+  max-width: 760px;
+  margin-bottom: 24px;
 }
 
 .embedded-note-header .note-breadcrumb {
@@ -1402,30 +1394,30 @@ a.research-item:focus-visible {
 .embedded-note-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(30px, 3.4vw, 42px);
+  font-size: clamp(27px, 2.9vw, 36px);
   font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.12;
+  line-height: 1.15;
 }
 
 .embedded-note .note-prose {
-  max-width: 680px;
+  max-width: 760px;
 }
 
 .note {
-  max-width: 860px;
-  padding-block: 70px 120px;
+  max-width: 920px;
+  padding-block: 48px 84px;
 }
 
 .note-header {
-  max-width: 680px;
-  margin-bottom: 44px;
+  max-width: 760px;
+  margin-bottom: 28px;
 }
 
 .note-breadcrumb {
-  margin: 26px 0 12px;
+  margin: 18px 0 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -1433,76 +1425,77 @@ a.research-item:focus-visible {
 .note-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(34px, 4.6vw, 50px);
+  font-size: clamp(29px, 3.8vw, 40px);
   font-weight: 400;
   letter-spacing: -0.025em;
-  line-height: 1.1;
+  line-height: 1.14;
 }
 
 .note-dek {
-  max-width: 640px;
-  margin: 18px 0 0;
+  max-width: 720px;
+  margin: 12px 0 0;
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .note-prose {
-  max-width: 680px;
-  font-size: 17px;
-  line-height: 1.75;
+  max-width: 760px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .note-prose p,
 .note-prose ul,
 .note-prose ol {
-  margin: 0 0 1.25em;
+  margin: 0 0 0.9em;
 }
 
 .note-prose li + li {
-  margin-top: 0.35em;
+  margin-top: 0.2em;
 }
 
 .note-prose h2,
 .note-prose h3,
 .note-prose h4 {
-  margin: 2.15em 0 0.7em;
+  margin: 1.5em 0 0.45em;
   letter-spacing: -0.01em;
-  line-height: 1.25;
+  line-height: 1.22;
 }
 
 .note-prose h2 {
-  font-size: 27px;
+  font-size: 21px;
 }
 
 .note-prose h3 {
-  font-size: 21px;
+  font-size: 17px;
 }
 
 .note-prose h4 {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 .note-prose blockquote {
-  margin: 1.7em 0;
-  padding-left: 18px;
-  font-size: 18px;
-  line-height: 1.65;
+  margin: 1.25em 0;
+  padding-left: 14px;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .note-prose pre {
   border-radius: 4px;
-  padding: 18px;
-  font-size: 13px;
-  line-height: 1.55;
+  margin-block: 1.2em;
+  padding: 14px;
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .note-prose img,
 .note-prose figure {
-  margin-block: 1.8em;
+  margin-block: 1.25em;
 }
 
 .note-prose table {
@@ -1510,17 +1503,17 @@ a.research-item:focus-visible {
   width: 100%;
   overflow-x: auto;
   border-collapse: collapse;
-  margin: 1.7em 0;
+  margin: 1.2em 0;
   font-family: var(--sans);
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .note-prose th,
 .note-prose td {
-  min-width: 110px;
+  min-width: 100px;
   border: 1px solid var(--line);
-  padding: 8px 10px;
+  padding: 6px 8px;
   text-align: left;
   vertical-align: top;
 }
@@ -1532,8 +1525,8 @@ a.research-item:focus-visible {
 
 .note-prose .mermaid {
   overflow-x: auto;
-  margin: 1.7em 0;
-  padding: 14px;
+  margin: 1.2em 0;
+  padding: 10px;
   background: var(--paper-deep);
   text-align: center;
 }
@@ -1896,24 +1889,24 @@ a.research-item:focus-visible {
   }
 
   .note {
-    padding-block: 52px 84px;
+    padding-block: 38px 68px;
   }
 
   .note-header h1 {
-    font-size: clamp(32px, 10vw, 42px);
+    font-size: clamp(27px, 8vw, 34px);
   }
 
   .note-prose {
-    font-size: 16px;
-    line-height: 1.72;
+    font-size: 14px;
+    line-height: 1.58;
   }
 
   .note-prose h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .note-prose h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .footer-bottom {
