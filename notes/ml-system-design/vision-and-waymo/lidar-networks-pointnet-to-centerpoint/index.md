@@ -4,7 +4,7 @@ title: "Lidar Networks — PointNet to CenterPoint"
 description: "Lidar returns a point cloud: ~100–300k points per sweep, each (x, y, z, intensity). Two properties break standard nets: it's an unordered set (any permutation is the same scene…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 4
 updated: 2026-06-09 12:46:21 -0700

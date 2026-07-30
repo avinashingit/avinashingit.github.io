@@ -4,7 +4,7 @@ title: "BEV Representations and Sensor Fusion"
 description: "A camera image is a perspective projection — depth is lost. To place camera evidence in the bird's-eye-view plane you must reason about depth. Two canonical mechanisms:"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 1
 updated: 2026-06-09 12:46:21 -0700

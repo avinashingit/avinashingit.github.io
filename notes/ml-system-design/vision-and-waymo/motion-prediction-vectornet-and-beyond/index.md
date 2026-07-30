@@ -4,7 +4,7 @@ title: "Motion Prediction — VectorNet and Beyond (Waymo core)"
 description: "Task: given each agent's past track + the HD map + traffic context, predict each agent's next ~8 seconds. Sits between perception and planning; Waymo wrote the canonical papers,…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 5
 updated: 2026-06-09 12:46:21 -0700

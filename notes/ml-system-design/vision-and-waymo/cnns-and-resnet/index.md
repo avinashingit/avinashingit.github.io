@@ -4,7 +4,7 @@ title: "CNNs and ResNet"
 description: "A convolutional layer slides a small learned filter (e.g., 3×3×C) across the image, computing a dot product at each location → a feature map. Three built-in assumptions (inducti…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 3
 updated: 2026-06-09 12:45:07 -0700

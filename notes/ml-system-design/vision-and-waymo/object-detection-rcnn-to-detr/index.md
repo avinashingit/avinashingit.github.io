@@ -4,7 +4,7 @@ title: "Object Detection — R-CNN to DETR"
 description: "Task: localize (boxes) + classify every object. Know the two-stage/one-stage/set-prediction trichotomy and the shared vocabulary: IoU (intersection-over-union of boxes), NMS (no…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 6
 updated: 2026-06-09 12:45:07 -0700

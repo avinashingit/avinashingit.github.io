@@ -1198,6 +1198,36 @@ a.research-item:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.notes-index-parent > summary {
+  padding-block: 13px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.notes-index-parent > summary::-webkit-details-marker {
+  display: none;
+}
+
+.notes-index-parent > summary::before {
+  content: "▸";
+  display: inline-block;
+  width: 20px;
+  color: var(--accent);
+}
+
+.notes-index-parent[open] > summary::before {
+  content: "▾";
+}
+
+.notes-index-children {
+  margin-left: 6px;
+  border-left: 1px solid var(--line);
+  padding-left: 12px;
+}
+
 .notes-index-group summary {
   display: grid;
   grid-template-columns: 25px 1fr;

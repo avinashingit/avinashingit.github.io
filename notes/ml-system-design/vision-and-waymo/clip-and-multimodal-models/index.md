@@ -4,7 +4,7 @@ title: "CLIP and Multimodal Models"
 description: "Train on ~400M (image, caption) pairs from the web with a symmetric InfoNCE loss over the batch: each image must pick out its own caption among all captions in the batch (and vi…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 2
 updated: 2026-06-10 18:47:40 -0700

@@ -4,7 +4,7 @@ title: "Planning, Imitation Learning, and the Waymo Stack"
 description: "The long tail rules AV ML: millions of miles are boring; value is in rare events. The loop:"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 7
 updated: 2026-06-10 18:47:40 -0700

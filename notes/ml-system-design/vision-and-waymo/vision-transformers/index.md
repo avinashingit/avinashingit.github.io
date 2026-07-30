@@ -4,7 +4,7 @@ title: "Vision Transformers (ViT)"
 description: "Cut the image into 16×16 patches; linearly project each patch to a vector (\"patch embedding\"); add position embeddings; prepend a learnable [CLS] token; run a standard Transform…"
 note: true
 note_collection: "ML system design"
-note_section: "Vision and Waymo"
+note_section: "Vision"
 section_order: 6
 note_order: 8
 updated: 2026-06-09 12:45:07 -0700
