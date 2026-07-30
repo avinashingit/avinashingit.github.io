@@ -268,8 +268,8 @@ img {
 .resume-grid {
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
-  gap: clamp(46px, 7vw, 92px);
+  grid-template-columns: minmax(0, 1.45fr) minmax(210px, 0.78fr) minmax(230px, 0.9fr);
+  gap: clamp(28px, 3vw, 48px);
 }
 
 .resume-grid h2 {
@@ -295,7 +295,8 @@ img {
 }
 
 .experience-list time,
-.education time {
+.education time,
+.recent-writing time {
   color: var(--muted);
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -303,7 +304,8 @@ img {
 }
 
 .experience-list h3,
-.education h3 {
+.education h3,
+.recent-writing h3 {
   margin: 0;
   font-family: var(--serif);
   font-size: 18px;
@@ -318,9 +320,10 @@ img {
   font-size: 10px;
 }
 
-.education {
+.education,
+.recent-writing {
   border-left: 1px solid var(--line);
-  padding-left: clamp(28px, 4vw, 50px);
+  padding-left: clamp(22px, 2.5vw, 38px);
 }
 
 .education article {
@@ -329,6 +332,27 @@ img {
 }
 
 .education h3 {
+  margin-top: 5px;
+}
+
+.recent-article-list {
+  border-top: 1px solid var(--line);
+}
+
+.recent-article {
+  display: block;
+  border-bottom: 1px solid var(--line);
+  padding-block: 12px 13px;
+  transition: color 180ms ease, padding-left 180ms ease;
+}
+
+.recent-article:hover,
+.recent-article:focus-visible {
+  padding-left: 6px;
+  color: var(--accent);
+}
+
+.recent-article h3 {
   margin-top: 5px;
 }
 
@@ -1180,7 +1204,8 @@ a.research-item:focus-visible {
     gap: 48px;
   }
 
-  .education {
+  .education,
+  .recent-writing {
     border-top: 1px solid var(--line);
     border-left: 0;
     padding-top: 42px;

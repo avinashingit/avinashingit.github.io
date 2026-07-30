@@ -62,5 +62,18 @@ description: Avinash Kadimisetty is a machine learning engineer at Meta who buil
         <p>B.Tech. in Computer Engineering · With distinction</p>
       </article>
     </aside>
+
+    <aside class="recent-writing" aria-labelledby="recent-writing-heading">
+      <h2 id="recent-writing-heading">Recent articles</h2>
+      <div class="recent-article-list">
+        {% assign recent_articles = site.pages | where: "article", true | sort: "date" | reverse %}
+        {% for article in recent_articles limit: 3 %}
+          <a class="recent-article" href="{{ article.url | relative_url }}">
+            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %-d, %Y" }}</time>
+            <h3>{{ article.title }}</h3>
+          </a>
+        {% endfor %}
+      </div>
+    </aside>
   </div>
 </section>
