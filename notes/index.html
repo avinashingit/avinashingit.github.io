@@ -7,6 +7,8 @@ body_class: notes-page
 math: true
 mermaid: true
 ---
+{% assign all_notes = site.data.ml_system_design_notes.notes | concat: site.data.ml_algorithm_notes.notes | sort: "updated" | reverse %}
+{% assign all_keywords = site.data.ml_system_design_notes.keywords | concat: site.data.ml_algorithm_notes.keywords | uniq | sort %}
 <section class="notes-browser shell" data-notes-browser>
   <aside class="notes-sidebar" aria-label="Notes index">
     <div class="notes-panel-heading">
@@ -54,17 +56,57 @@ mermaid: true
           </div>
         </div>
       </div>
+
+      <div class="notes-index-parent">
+        <button
+          class="notes-index-parent-label"
+          type="button"
+          aria-expanded="true"
+          aria-controls="ml-algorithms-index"
+          data-index-parent-toggle
+        >
+          ML algorithms
+        </button>
+        <div class="notes-index-parent-panel" id="ml-algorithms-index">
+          <div>
+            <div class="notes-index-children" data-index-accordion>
+              {% for section in site.data.ml_algorithm_notes.sections %}
+                <section class="notes-index-group">
+                  <button
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="algorithm-section-{{ section.number }}"
+                    data-index-toggle
+                  >
+                    <span>{{ section.number }}</span>
+                    <span>{{ section.title }}</span>
+                  </button>
+                  <div class="notes-index-panel" id="algorithm-section-{{ section.number }}">
+                    <div>
+                      <nav aria-label="{{ section.title }} notes">
+                        {% for note in section.notes %}
+                          <a href="{{ note.url | relative_url }}" data-note-view>{{ note.title }}</a>
+                        {% endfor %}
+                      </nav>
+                    </div>
+                  </div>
+                </section>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </aside>
 
   <section class="notes-results-panel" aria-live="polite">
     <header class="notes-results-heading">
       <span data-results-label>All notes · Recent first</span>
-      <span data-results-count>{{ site.data.ml_system_design_notes.notes.size }}</span>
+      <span data-results-count>{{ all_notes.size }}</span>
     </header>
 
     <div class="notes-results" data-notes-results>
-      {% for note in site.data.ml_system_design_notes.notes %}
+      {% for note in all_notes %}
         <article class="note-summary" data-note-card data-keywords="{{ note.keywords | join: '|' | downcase | escape }}">
           <div class="note-summary-meta">
             <span>{{ note.section_number }} · {{ note.section }}</span>
@@ -85,7 +127,7 @@ mermaid: true
   <aside class="notes-keywords" aria-label="Filter notes by keyword">
     <div class="notes-panel-heading"><span>Keywords</span></div>
     <div class="keyword-list">
-      {% for keyword in site.data.ml_system_design_notes.keywords %}
+      {% for keyword in all_keywords %}
         <button type="button" data-keyword="{{ keyword | downcase | escape }}" aria-pressed="false">
           <span>{{ keyword }}</span>
         </button>
